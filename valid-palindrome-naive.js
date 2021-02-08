@@ -3,7 +3,7 @@
  * @return {boolean}
  */
 var isPalindrome = function (s) {
-  return s.split("").reverse().join("") === s;
-};
+  const sanitised = s.replace(/[\W_]+/g, "").toLowerCase();
 
-// console.log(isPalindrome("racecar"));
+  return sanitised.split("").reverse().join("") === sanitised;
+};
